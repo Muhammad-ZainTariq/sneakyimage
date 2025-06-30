@@ -3,6 +3,7 @@ mod steganography;
 use anyhow::Result;
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
+use figlet_rs::FIGfont;
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
@@ -82,7 +83,13 @@ fn main() -> Result<()> {
         Commands::Dec { input } => {
             println!("Decoding message from '{}'", input.display());
             let message = steganography::decode(input)?;
-            println!("The secret message is: {}", message);
+            let standard_font = FIGfont::standard().unwrap();
+            let figure = standard_font.convert(&message);
+            if let Some(ref figure) = figure {
+                println!("\x1b[1;31m{}\x1b[0m", figure);
+            } else {
+                println!("\x1b[1;31mThe secret message is: {}\x1b[0m", message);
+            }
         }
     }
 
