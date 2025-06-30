@@ -38,6 +38,11 @@ sneakyimage enc <input_image> "<your secret message>" <output_image>
 sneakyimage enc /Users/muhammad-zain/Documents/logo2.png "Yo wys say" /Users/muhammad-zain/Documents/logoo.png
 ```
 
+**Or run directly from the target directory:**
+```bash
+./target/release/sneakyimage enc /Users/muhammad-zain/Documents/logo2.png "Yo wys say" /Users/muhammad-zain/Documents/logoo.png
+```
+
 ### Decode a message
 
 ```bash
@@ -47,6 +52,11 @@ sneakyimage dec <encoded_image>
 **Example:**
 ```bash
 sneakyimage dec /Users/muhammad-zain/Documents/logoo.png
+```
+
+**Or run directly from the target directory:**
+```bash
+./target/release/sneakyimage dec /Users/muhammad-zain/Documents/logoo.png
 ```
 
 ## Output
