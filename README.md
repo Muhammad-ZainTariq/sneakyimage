@@ -66,4 +66,7 @@ When you decode, the secret message will be printed to your terminal.
 
 ## License
 
-MIT (or specify your preferred license) 
+MIT (or specify your preferred license)
+
+![Rust](https://img.shields.io/badge/Rust-🦀-orange)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen) 
